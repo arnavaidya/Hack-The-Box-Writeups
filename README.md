@@ -54,6 +54,7 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | Connected | Easy | [View](Connected.md) |
 | Paperwork | Easy | [View](Paperwork.md) |
 | Management | Easy | [View](Management.md) |
+| Cohort | Easy | [View](Cohort.md) |
 
 
 ## Goals
