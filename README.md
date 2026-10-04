@@ -55,7 +55,8 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | Paperwork | Easy | [View](Paperwork.md) |
 | Management | Easy | [View](Management.md) |
 | Cohort | Easy | [View](Cohort.md) |
-
+| Enigma | Easy | [View](Enigma.md) |
+| DevHub | Medium | [View](DevHub.md) |
 
 ## Goals
 
