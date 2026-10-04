@@ -412,15 +412,9 @@ The root flag is successfully obtained.
 # Attack Chain
 
 ```text
-Nmap (22/tcp SSH, 80/tcp HTTP) →
-devhub.htb webpage references MCPJam → Inspector on port 6274, version 1.4.2 →
-CVE-2026-23744 unauthenticated RCE via /api/mcp/connect → shell as mcp-dev →
-JupyterLab found on 127.0.0.1:8888, token leaked in process arguments →
-SSH persistence + local port forward to reach JupyterLab →
-Notebook code execution → shell as analyst (user flag) →
-Root-owned /opt/opsmcp/server.py, source readable by analyst →
-Hardcoded OPSMCP API key →
-Hidden ops._admin_dump tool reachable via /tools/call →
-Root SSH private key disclosed →
-SSH as root (root flag)
+Nmap → MCPJam Inspector 1.4.2 on port 6274 →
+CVE-2026-23744 unauthenticated RCE → shell as mcp-dev →
+JupyterLab token leaked in process args → port forward + notebook RCE → shell as analyst (user flag) →
+Root-owned OPSMCP service readable by analyst → hardcoded API key → hidden ops._admin_dump tool →
+Root SSH key disclosed → SSH as root (root flag)
 ```
