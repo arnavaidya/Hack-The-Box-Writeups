@@ -57,6 +57,7 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | Cohort | Easy | [View](Cohort.md) |
 | Enigma | Easy | [View](Enigma.md) |
 | DevHub | Medium | [View](DevHub.md) |
+| MakeSense | Medium | [View](MakeSense.md) |
 
 ## Goals
 
