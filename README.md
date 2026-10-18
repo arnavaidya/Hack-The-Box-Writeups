@@ -58,6 +58,7 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | Enigma | Easy | [View](Enigma.md) |
 | DevHub | Medium | [View](DevHub.md) |
 | MakeSense | Medium | [View](MakeSense.md) |
+| Bedside | Medium | [View](Bedside.md) |
 
 ## Goals
 
