@@ -5,7 +5,7 @@
 Command:
 
 ```bash
-nmap -sV -sC -T5 devhub.htb
+nmap -sV -sC -T5 <target_ip>
 ```
 
 The scan reveals SSH (22) and an nginx web server on 80.
