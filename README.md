@@ -60,6 +60,7 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | MakeSense | Medium | [View](MakeSense.md) |
 | Bedside | Medium | [View](Bedside.md) |
 | Stream | Medium | [View](Stream.md) |
+| DutyBound | Medium | [View](DutyBound.md) |
 
 ## Goals
 
