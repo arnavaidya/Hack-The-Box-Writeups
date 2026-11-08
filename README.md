@@ -49,19 +49,19 @@ All techniques demonstrated were performed in authorized environments. Do not at
 
 ## Machines
 
-| Machine     | Difficulty | Writeup                                                                                      |
-| ----------- | ---------- | -------------------------------------------------------------------------------------------- |
-| Connected | Easy | [View](Connected.md) |
-| Paperwork | Easy | [View](Paperwork.md) |
-| Management | Easy | [View](Management.md) |
-| Cohort | Easy | [View](Cohort.md) |
-| Enigma | Easy | [View](Enigma.md) |
-| DevHub | Medium | [View](DevHub.md) |
-| MakeSense | Medium | [View](MakeSense.md) |
-| Bedside | Medium | [View](Bedside.md) |
-| Stream | Medium | [View](Stream.md) |
-| DutyBound | Medium | [View](DutyBound.md) |
-| Touch | Easy | [View](Touch.md) |
+| Machine    | Difficulty | OS      | Writeup               |
+| ---------- | ---------- | ------- | --------------------- |
+| Connected  | Easy       | Linux   | [View](Connected.md)  |
+| Paperwork  | Easy       | Linux   | [View](Paperwork.md)  |
+| Management | Easy       | Linux   | [View](Management.md) |
+| Cohort     | Easy       | Linux   | [View](Cohort.md)     |
+| Enigma     | Easy       | Linux   | [View](Enigma.md)     |
+| DevHub     | Medium     | Linux   | [View](DevHub.md)     |
+| MakeSense  | Medium     | Linux   | [View](MakeSense.md)  |
+| Bedside    | Medium     | Linux   | [View](Bedside.md)    |
+| Stream     | Medium     | Linux   | [View](Stream.md)     |
+| DutyBound  | Medium     | Linux   | [View](DutyBound.md)  |
+| Touch      | Easy       | Windows | [View](Touch.md)      |
 
 ## Goals
 
