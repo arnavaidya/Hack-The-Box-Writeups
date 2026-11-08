@@ -61,6 +61,7 @@ All techniques demonstrated were performed in authorized environments. Do not at
 | Bedside | Medium | [View](Bedside.md) |
 | Stream | Medium | [View](Stream.md) |
 | DutyBound | Medium | [View](DutyBound.md) |
+| Touch | Easy | [View](Touch.md) |
 
 ## Goals
 
