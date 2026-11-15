@@ -581,10 +581,3 @@ Self-Checkout Recon (airsnacks.htb)
    → pos-ops group-writable duty-rates.csv → root systemd .path/.service
    → unsanitised eval of CSV field 1 → SUID bash → Root
 ```
-
-## Key Takeaways
-
-- **Parameterise every query, including logging.** The audit INSERT was the only unparameterised statement in the module and it was the entire foothold.
-- **Minimise DB role grants.** `pg_execute_server_program` turned a string-concatenation bug into OS command execution without superuser.
-- **Lock down local X11.** An open display (`:0`) lets any local account drive another user's GUI session via XTEST, regardless of file-permission boundaries on the auth cookie.
-- **Never `eval` external input.** Numeric validation on two of three CSV fields created a false sense of safety; the unchecked field, writable by a non-root group and consumed by a root service, was game over.
